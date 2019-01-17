@@ -1,0 +1,65 @@
+.header {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
+    z-index: 1;
+    padding-left: 5px;
+}
+
+.header h5 {
+    font-family: 'Alex Brush', cursive;
+    font-size: 34px;
+    content: '\e8b9';
+    color: crimson;
+}
+
+#name {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.main-section {
+    padding-top: 49px;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#sub-section {
+    <div class="card card-5"></div>
+    background-color: rgb(245, 245, 245);
+}
+
+.sidenav {
+    padding-bottom: 40px;
+}
+
+/* cards mainsection */
+.card {
+    background: #fff;
+    display: inline-block;
+    height: 200px;
+    margin: 1rem;
+    position: relative;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    float: unset;
+}
+
+.card-5 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+/* footer */
+.footer{
+    margin-top: 30px;
+    border-top: 1px solid rgb(228, 228, 228);
+    text-align: center;
+    padding-top: 20px;
+}
