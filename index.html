@@ -2,64 +2,136 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
-    <title>REMINDER</title>
-
+    <title>Reminder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/boostrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Poiret+One" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/locale/nl.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
 </head>
 
 <body>
-    <!-- header - top navigation -->
-    <div class="header">
-        <div class="row">
-            <div class="col-sm-4 col-xs-4 col-md-4">
-                <a href=""><img src="./image/menu-alt-512.png" alt="" class="img-responsive" width="25px;"></a>
-            </div>
-            <div class="col-sm-4 col-xs-4 col-md-4" id="name">
-                <h5>Reminder</h5>
-            </div>
-            <div class="col-sm-4 col-xs-4 col-md-4">
 
+    <div class="container">
+        <div class="header">
+            <div class="row">
+                <div class="col-sm-4 col-xs-4 col-md-4">
+                    <a href=""><img src="./image/menu-alt-512.png" alt="" class="img-responsive" width="25px;"></a>
+                </div>
+                <div class="col-sm-4 col-xs-4 col-md-4" id="name">
+                    <h5><b>Reminder</b></h5>
+                </div>
+                <div class="col-sm-4 col-xs-4 col-md-4">
+
+                </div>
             </div>
         </div>
-    </div>
+        <!-- Button trigger modal -->
+        <div class="container-fluid" style="padding-top:65px;">
+            <button type="button" class="addButton" data-toggle="modal" data-target="#exampleModalLong">
+                Add Event
+            </button>
+        </div>
 
-    <!-- main section -->
-    <div class="main-section">
+        <!-- Modal -->
+        <div class="modal fade  container" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+            aria-hidden="true" >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="padding:30px;">
+                    <form>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Event</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>PERSONAL</option>
+                                <option>WORK</option>
+                                <option>Grocery List</option>
+                                <option>To Do List</option>
+                                <option>Activities</option>
+                                <option>Books</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">What would you like to be reminded?</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div>
+                                    <div class="form-group">
+                                        <div class='input-group date' id='datetimepicker1'>
+                                            <input type='text' class="form-control" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-info">Save</button>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepicker1').datetimepicker();
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 card card-5">
-               <h4 class="btn btn-success">Add Reminder</h4>
+                <h4 class="btn btn-success">PERSONAL</h4>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 card card-5">
-                <h4 class="btn btn-primary">Add Reminder</h4>
+                <h4 class="btn btn-primary">WORK</h4>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 card card-5">
-                <h4 class="btn btn-warning">Add Reminder</h4>
+                <h4 class="btn btn-warning">Grocery List</h4>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 card card-5">
-                <h4 class="btn btn-danger">Add Reminder</h4>
+                <h4 class="btn btn-danger">To Do List</h4>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 card card-5">
-                <h4 class="btn btn-info">Add Reminder</h4>
+                <h4 class="btn btn-info">Activities</h4>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 card card-5">
-                <h4 class="btn btn-success">Add Reminder</h4>
+                <h4 class="btn btn-success">Books</h4>
             </div>
         </div>
+
     </div>
- <!-- footer -->
- <div class="container-fluid footer">
-     <img src="./image/facebook_circle_color-512.png" alt="" class="img-responsive" width="30px;">
-    <img src="./image/twitter_circle-512.png" alt="" class="img-responsive" width="30px;">
- </div>
+
+    <div class="container-fluid footer">
+        <img src="./image/facebook_circle_color-512.png" alt="" class="img-responsive" width="30px;">
+        <img src="./image/twitter_circle-512.png" alt="" class="img-responsive" width="30px;">
+        <p>Copyright 2019</p>
+    </div>
+
+
 </body>
 
 </html>
